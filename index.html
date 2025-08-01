@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="list-container">
+        <h1>Einkaufsliste</h1>
+
+        <div class="item-form">
+            <input type="text" id="item-input" placeholder="Gib einen Artikel ein...">
+            <button type="submit" id="item-btn">Speichern</button>
+        </div>
+
+        <ul draggable="true" id="item-list">
+
+        </ul>
+
+        <template id="item-template"> <!--Gruppiert verschiedene Elemente-->
+            <li>
+                <span class="item-text"></span>
+                <button class="image-btn"></button>
+                <div>
+                    <input type="file" accept="image/*">
+                </div>
+
+                <input type="checkbox" class="item-checkbox">
+                <button class="delete-btn">X</button>
+            </li>
+        </template>
+    </div>
+
+    <div id="image-overlay" class="overlay">
+        <button id="close-overlay" class="close-btn">X</button>
+        <img id="overlay-image" src="" alt="Vergrössertes Bild">
+    </div>
+
+    <script src="function.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
